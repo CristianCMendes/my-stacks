@@ -7,12 +7,12 @@ export default defineConfig((_mode) => {
 	return {
 		plugins: [react(), configPaths()],
 		appType: 'spa',
-		build:{
-			rollupOptions:{
-				output:{
-					manualChunks:{
+		build: {
+			rollupOptions: {
+				output: {
+					manualChunks: {
 						'material-ui': ['@mui/material', '@mui/icons-material'],
-						'react': ['react', 'react-dom']
+						'react': ['react', 'react-dom', 'react-router']
 					},
 					entryFileNames: 'assets/[name].js',
 					chunkFileNames: 'assets/[name].js',
